@@ -52,8 +52,8 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
             <address className="text-gray-400 not-italic">
-              <p className="mb-2">Email: <a href="mailto:hello@agapelabs.com" className="hover:text-white transition-colors">hello@agapelabs.com</a></p>
-              <p className="mb-2">Phone: <a href="tel:+1234567890" className="hover:text-white transition-colors">+1 (234) 567-890</a></p>
+              <p className="mb-2">Email: <a href="mailto:team@agapelabs.co.uk" className="hover:text-white transition-colors">team@agapelabs.co.uk</a></p>
+              <p className="mb-2">Phone: <a href="tel:(+44) 07701073329" className="hover:text-white transition-colors">+1 (234) 567-890</a></p>
               <p>123 Tech Avenue<br />Innovation City, IC 12345</p>
             </address>
           </div>
