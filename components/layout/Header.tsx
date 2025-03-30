@@ -15,7 +15,7 @@ const Header = () => {
     <header className="py-4 border-b border-gray-100">
       <div className="container flex items-center justify-between">
         <Link href="/" className="flex items-center">
-          <div className="relative w-[180px] h-[60px]">
+          <div className="relative w-[240px] h-[80px]">
             <Image 
               src="/images/agape-labs-logo.png" 
               alt="Agape Labs Logo" 

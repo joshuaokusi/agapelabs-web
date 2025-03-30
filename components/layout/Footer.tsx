@@ -9,7 +9,7 @@ const Footer = () => {
       <div className="container">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           <div className="flex flex-col">
-            <div className="relative w-[180px] h-[60px] mb-4">
+            <div className="relative w-[240px] h-[80px] mb-4">
               <Image 
                 src="/images/agape-labs-logo-white.png" 
                 alt="Agape Labs Logo" 
@@ -44,7 +44,6 @@ const Footer = () => {
             <nav className="flex flex-col space-y-3">
               <Link href="/" className="text-gray-400 hover:text-white transition-colors">Home</Link>
               <Link href="/about" className="text-gray-400 hover:text-white transition-colors">About</Link>
-              <Link href="/services" className="text-gray-400 hover:text-white transition-colors">Services</Link>
               <Link href="/contact" className="text-gray-400 hover:text-white transition-colors">Contact</Link>
             </nav>
           </div>
@@ -53,8 +52,8 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
             <address className="text-gray-400 not-italic">
               <p className="mb-2">Email: <a href="mailto:team@agapelabs.co.uk" className="hover:text-white transition-colors">team@agapelabs.co.uk</a></p>
-              <p className="mb-2">Phone: <a href="tel:(+44) 07701073329" className="hover:text-white transition-colors">+1 (234) 567-890</a></p>
-              <p>123 Tech Avenue<br />Innovation City, IC 12345</p>
+              <p className="mb-2">Phone: <a href="tel:+447701073329" className="hover:text-white transition-colors">(+44) 07701073329</a></p>
+              <p>2 Gas Street<br />Coventry<br />CV4FG</p>
             </address>
           </div>
         </div>
