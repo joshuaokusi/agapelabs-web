@@ -34,9 +34,6 @@ const Header = () => {
           <Link href="/about" className="text-black hover:text-gray-600 font-medium transition">
             About
           </Link>
-          <Link href="/services" className="text-black hover:text-gray-600 font-medium transition">
-            Services
-          </Link>
           <Link href="/contact" className="btn btn-primary">
             Contact Us
           </Link>
@@ -67,9 +64,6 @@ const Header = () => {
             </Link>
             <Link href="/about" className="text-black hover:text-gray-600 font-medium py-2 transition" onClick={toggleMenu}>
               About
-            </Link>
-            <Link href="/services" className="text-black hover:text-gray-600 font-medium py-2 transition" onClick={toggleMenu}>
-              Services
             </Link>
             <Link href="/contact" className="btn btn-primary w-full text-center" onClick={toggleMenu}>
               Contact Us
