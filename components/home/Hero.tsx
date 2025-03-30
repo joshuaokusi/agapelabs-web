@@ -10,6 +10,7 @@ const Hero = () => {
   const ctaRef = useRef<HTMLDivElement>(null);
   const imageRef = useRef<HTMLDivElement>(null);
   const [imgError, setImgError] = useState(false);
+  const [imgLoaded, setImgLoaded] = useState(false);
 
   useEffect(() => {
     const heading = headingRef.current;
@@ -77,18 +78,20 @@ const Hero = () => {
             <div className="relative w-full h-[400px] md:h-[500px] bg-gray-200 rounded-lg">
               <div 
                 className="absolute inset-0 flex items-center justify-center text-gray-400"
-                style={{ display: imgError ? 'flex' : 'none' }}
+                style={{ display: imgError || !imgLoaded ? 'flex' : 'none' }}
               >
-                <p className="text-sm">Hero image placeholder</p>
+                <p className="text-sm">{imgError ? "Failed to load hero image" : "Loading hero image..."}</p>
               </div>
               <Image 
-                src={process.env.NODE_ENV === 'production' ? '/agapelabs-web/images/hero-image.jpg' : '/images/hero-image.jpg'}
+                src={'/images/hero-image.png'}
                 alt="Christian Technology" 
                 fill
                 className="object-cover rounded-lg shadow-xl"
                 sizes="(max-width: 768px) 100vw, 50vw"
                 priority
+                unoptimized
                 onError={() => setImgError(true)}
+                onLoad={() => setImgLoaded(true)}
                 style={{ display: imgError ? 'none' : 'block' }}
               />
             </div>

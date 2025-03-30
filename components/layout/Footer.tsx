@@ -1,20 +1,30 @@
+"use client";
+
 import Link from 'next/link';
 import Image from 'next/image';
+import { useState } from 'react';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+  const [logoError, setLogoError] = useState(false);
   
   return (
     <footer className="bg-black text-white pt-12 pb-6">
       <div className="container">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           <div className="flex flex-col">
-            <div className="relative w-[240px] h-[80px] mb-4">
+            <div className="relative w-[240px] h-[240px] mb-4">
+              {logoError && (
+                <div className="absolute inset-0 flex items-center justify-center text-gray-400">
+                  <p className="text-sm">Logo</p>
+                </div>
+              )}
               <Image 
-                src={process.env.NODE_ENV === 'production' ? '/agapelabs-web/images/agape-labs-logo-white.png' : '/images/agape-labs-logo-white.png'}
+                src={'/images/agape-labs-logo-white.png'}
                 alt="Agape Labs Logo" 
                 fill
-                style={{ objectFit: 'contain' }}
+                style={{ objectFit: 'contain', display: logoError ? 'none' : 'block' }}
+                onError={() => setLogoError(true)}
               />
             </div>
             <p className="text-gray-400 mb-4 max-w-md">

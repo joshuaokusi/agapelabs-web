@@ -6,6 +6,7 @@ import Image from 'next/image';
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [logoError, setLogoError] = useState(false);
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
@@ -15,13 +16,19 @@ const Header = () => {
     <header className="py-4 border-b border-gray-100">
       <div className="container flex items-center justify-between">
         <Link href="/" className="flex items-center">
-          <div className="relative w-[240px] h-[80px]">
+          <div className="relative w-[200px] h-[70]">
+            {logoError && (
+              <div className="absolute inset-0 flex items-center justify-center text-gray-400">
+                <p className="text-sm">Logo</p>
+              </div>
+            )}
             <Image 
-              src={process.env.NODE_ENV === 'production' ? '/agapelabs-web/images/agape-labs-logo.png' : '/images/agape-labs-logo.png'}
+              src={'/images/agape-labs-logo.png'}
               alt="Agape Labs Logo" 
               fill
-              style={{ objectFit: 'contain' }}
+              style={{ objectFit: 'contain', display: logoError ? 'none' : 'block' }}
               priority
+              onError={() => setLogoError(true)}
             />
           </div>
         </Link>

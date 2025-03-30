@@ -27,7 +27,7 @@ export default function About() {
                 <p className="text-sm">About image placeholder</p>
               </div>
               <Image 
-                src={process.env.NODE_ENV === 'production' ? '/agapelabs-web/images/about-image.jpg' : '/images/about-image.jpg'}
+                src={'/images/about-image.jpg'}
                 alt="About Agape Labs" 
                 fill
                 className="object-cover"
@@ -40,13 +40,10 @@ export default function About() {
             <div>
               <h2 className="text-3xl font-bold mb-6">Our Story</h2>
               <p className="text-lg text-gray-700 mb-6">
-                Agape Labs was founded with a simple mission: to use technology as a vessel for spreading God's love. We believe that innovative technical solutions can be used to solve meaningful problems and make a positive impact in the world.
+                Feran and Josh are two young budding entrepreneurs with a passion for connecting people and a deep passion for Christ. After becoming good friends, Feran and Josh decided to begin a couple ventures together and eventually sensed a call from God to house these ongoing projects and future projects under the umbrella of what was to be Agape Labs.
               </p>
               <p className="text-lg text-gray-700 mb-6">
-                Our team consists of passionate technologists who are driven by faith and a desire to serve. We combine technical excellence with Christian values to deliver solutions that truly make a difference.
-              </p>
-              <p className="text-lg text-gray-700">
-                Whether we're developing software for churches, creating tools for ministry, or building platforms that connect communities, our focus is always on how technology can be used to spread love, kindness, and positive change.
+                Agape Labs was established as a think tank and melting pot for the very best our creativity, imagination and leading innovations in the tech space are able to offer…all pointed towards our core mission; spreading God's love through tech.
               </p>
             </div>
           </div>
@@ -55,23 +52,23 @@ export default function About() {
             <h2 className="text-3xl font-bold mb-8 text-center">Our Values</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="bg-gray-50 p-8 rounded-lg">
-                <h3 className="text-xl font-semibold mb-4">Faith-Driven</h3>
+                <h3 className="text-xl font-semibold mb-4">Love</h3>
                 <p className="text-gray-700">
-                  Our faith is the foundation of everything we do. We strive to reflect God's love in our work, relationships, and business practices.
+                  Our name, Agape Labs, comes from the Greek agape (John 13:34). We aim to embody this unconditional love in everything we create.
                 </p>
               </div>
               
               <div className="bg-gray-50 p-8 rounded-lg">
-                <h3 className="text-xl font-semibold mb-4">Excellence</h3>
+                <h3 className="text-xl font-semibold mb-4">Building</h3>
                 <p className="text-gray-700">
-                  We believe in doing everything with excellence as a reflection of our commitment to God and the people we serve.
+                  We believe in building platforms that bring people together and make God known to as many as possible.
                 </p>
               </div>
               
               <div className="bg-gray-50 p-8 rounded-lg">
                 <h3 className="text-xl font-semibold mb-4">Service</h3>
                 <p className="text-gray-700">
-                  We approach our work as an opportunity to serve others, focusing on meeting needs and solving real problems.
+                  At the core of our work here at Agape is service. Mark 10:45, Christ teaches and embodies true servant leadership and we are continually striving to serve communities and individuals's needs.
                 </p>
               </div>
             </div>
