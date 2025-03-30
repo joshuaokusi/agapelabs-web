@@ -61,8 +61,8 @@ const Hero = () => {
               ref={ctaRef}
               className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 transform translate-y-8 opacity-0 transition-all duration-700"
             >
-              <Link href="/services" className="btn btn-primary">
-                Our Services
+              <Link href="/about" className="btn btn-primary">
+                About Us
               </Link>
               <Link href="/contact" className="btn bg-white border border-black text-black hover:bg-gray-100">
                 Get in Touch
@@ -82,7 +82,7 @@ const Hero = () => {
                 <p className="text-sm">Hero image placeholder</p>
               </div>
               <Image 
-                src="/images/hero-image.jpg" 
+                src={process.env.NODE_ENV === 'production' ? '/agapelabs-web/images/hero-image.jpg' : '/images/hero-image.jpg'}
                 alt="Christian Technology" 
                 fill
                 className="object-cover rounded-lg shadow-xl"

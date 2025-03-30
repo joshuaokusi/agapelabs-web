@@ -17,7 +17,7 @@ const Header = () => {
         <Link href="/" className="flex items-center">
           <div className="relative w-[240px] h-[80px]">
             <Image 
-              src="/images/agape-labs-logo.png" 
+              src={process.env.NODE_ENV === 'production' ? '/agapelabs-web/images/agape-labs-logo.png' : '/images/agape-labs-logo.png'}
               alt="Agape Labs Logo" 
               fill
               style={{ objectFit: 'contain' }}

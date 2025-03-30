@@ -11,7 +11,7 @@ const Footer = () => {
           <div className="flex flex-col">
             <div className="relative w-[240px] h-[80px] mb-4">
               <Image 
-                src="/images/agape-labs-logo-white.png" 
+                src={process.env.NODE_ENV === 'production' ? '/agapelabs-web/images/agape-labs-logo-white.png' : '/images/agape-labs-logo-white.png'}
                 alt="Agape Labs Logo" 
                 fill
                 style={{ objectFit: 'contain' }}

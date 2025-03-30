@@ -27,7 +27,7 @@ export default function About() {
                 <p className="text-sm">About image placeholder</p>
               </div>
               <Image 
-                src="/images/about-image.jpg" 
+                src={process.env.NODE_ENV === 'production' ? '/agapelabs-web/images/about-image.jpg' : '/images/about-image.jpg'}
                 alt="About Agape Labs" 
                 fill
                 className="object-cover"
